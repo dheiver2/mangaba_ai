@@ -3,6 +3,7 @@ Módulo principal do Mangaba.AI
 """
 import asyncio
 import logging
+import os
 from .core.models import Agent, Task, GeminiModel
 
 logger = logging.getLogger(__name__)
@@ -74,7 +75,7 @@ async def main():
     """Função principal de execução."""
     try:
         # Inicializa o Mangaba.AI
-        mangaba = MangabaAI("your_api_key_here")
+        mangaba = MangabaAI(os.getenv("GEMINI_API_KEY"))
         
         # Cria agentes com diferentes modelos
         researcher = mangaba.create_agent(

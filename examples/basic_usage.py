@@ -6,12 +6,13 @@ Exemplo básico de uso do Mangaba.AI com protocolos A2A e MCP
 """
 import asyncio
 from mangaba_ai.main import MangabaAI
+import os
 
 async def main():
     """Função principal do exemplo."""
     try:
         # Chave de API do Gemini
-        api_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        api_key = os.getenv("GEMINI_API_KEY")
         
         # Inicializa o Mangaba.AI
         mangaba = MangabaAI(api_key)
