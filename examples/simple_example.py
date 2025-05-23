@@ -6,12 +6,13 @@ Exemplo simples do Mangaba.AI demonstrando o uso básico de um agente
 """
 import asyncio
 from mangaba_ai.main import MangabaAI
+import os
 
 async def main():
     """Função principal do exemplo."""
     try:
         # Inicializa o Mangaba.AI com sua chave de API
-        api_key = "YOUR_GEMINI_API_KEY"
+        api_key = os.getenv("GEMINI_API_KEY")
         mangaba = MangabaAI(api_key)
         
         # Cria um agente assistente

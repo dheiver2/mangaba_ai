@@ -52,7 +52,7 @@ source .venv/bin/activate  # Linux/macOS
 
 ```bash
 # Instale as dependências
-pip install google-generativeai python-dotenv
+pip install -r requirements.txt
 
 # Instale o Mangaba.AI
 pip install -e .
